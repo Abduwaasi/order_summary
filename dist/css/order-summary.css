@@ -10,6 +10,7 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 li {
@@ -24,22 +25,25 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-transform: capitalize;
   font-weight: 900;
   color: #1f2f56;
 }
 
 h1 {
-  font-size: 3rem;
-}
-
-h2 {
   font-size: 2.5rem;
 }
 
-h3 {
+h2 {
   font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 h4 {
@@ -62,5 +66,144 @@ img {
   background-color: #fff;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+}
+
+/*=========================
+        main styling
+===========================*/
+main ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 400px;
+  background: url(../images/pattern-background-mobile.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  main ::before {
+    background: url(../images/pattern-background-desktop.svg);
+  }
+}
+
+main {
+  z-index: 3;
+  width: 90vw;
+  max-width: 468px;
+  margin: 2rem auto;
+}
+
+.hero > img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/*======================
+        Top
+========================*/
+.top {
+  margin: 1rem auto 2rem auto;
+}
+
+.top p {
+  margin: 1rem auto;
+  line-height: 1.5;
+}
+
+/*======================
+           Middle
+========================*/
+.middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.middle .left-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.middle .left-middle img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.middle .left-middle div {
+  text-align: left;
+}
+
+.middle a {
+  text-decoration: underline;
+  color: #1f2f56;
+  font-weight: 700;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.middle a:hover {
+  color: #3829e0;
+}
+
+/*======================
+       Bottom
+========================*/
+.bottom {
+  margin-top: 1.5rem;
+}
+
+.bottom .payment-btn {
+  background-color: #7280a7;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: #f5f7ff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.bottom .payment-btn:hover {
+  background-color: #3829e0;
+  -webkit-box-shadow: 10px 10px 15px #f5f7ff;
+          box-shadow: 10px 10px 15px #f5f7ff;
+}
+
+.bottom .cancel-btn {
+  margin-top: 1.5rem;
+  color: #3829e0;
+  font-weight: 700;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.bottom .cancel-btn:hover {
+  color: #1f2f56;
 }
 /*# sourceMappingURL=order-summary.css.map */

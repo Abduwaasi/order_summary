@@ -20,6 +20,7 @@ $dark-blue: hsl(223, 47%, 23%);
 }
 a {
   text-decoration: none;
+  display:inline-block;
 }
 li {
   list-style-type: none;
@@ -31,41 +32,156 @@ body {
   color: $desaturated-blue;
   overflow-x: hidden;
 }
-h1,h2,h3,h4{
-    text-transform: capitalize;
-    font-weight: 900;
-    color:$dark-blue;
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  font-weight: 900;
+  color: $dark-blue;
 }
-h1{
-    font-size: 3rem;
-
+h1 {
+  font-size: 2.5rem;
 }
-h2{
-    font-size: 2.5rem;
-    
+h2 {
+  font-size: 1.5rem;
 }
-h3{
-    font-size: 1.5rem;
-    
+h3 {
+  font-size: 1rem;
 }
-h4{
-    font-size: 0.8rem;
-    
+h4 {
+  font-size: 0.8rem;
 }
-p{
-    font-size: 1rem;
+p {
+  font-size: 1rem;
 }
 img {
   display: block;
   width: 100%;
   height: 100%;
 }
-.container{
-    padding: 2rem 3rem;
-    text-align: center;
-    background-color: #fff;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+.container {
+  padding: 2rem 3rem;
+  text-align: center;
+  background-color: #fff;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+/*=========================
+        main styling
+===========================*/
+main ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 400px;
+  background: url(../images/pattern-background-mobile.svg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@media screen and(min-width: 768px) {
+  main ::before {
+    background: url(../images/pattern-background-desktop.svg);
+  }
 }
 
+main {
+  z-index: 3;
+  width: 90vw;
+  max-width: 468px;
+  margin: 2rem auto;
+}
 
+.hero > img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/*======================
+        Top
+========================*/
+.top {
+  margin: 1rem auto 2rem auto;
+  p {
+    margin: 1rem auto;
+    line-height: 1.5;
+  }
+}
+
+/*======================
+           Middle
+========================*/
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $very-pale-blue;
+  padding: 1.5rem;
+  border-radius: 10px;
+ 
+
+  .left-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+    }
+
+    div {
+      text-align: left;
+    }
+  }
+  a{
+    text-decoration: underline;
+    color:$dark-blue;
+    font-weight: 700;
+    transition:color .3s ease-in-out;
+
+    &:hover{
+        color:$bright-blue;
+    }
+  }
+}
+
+/*======================
+       Bottom
+========================*/
+.bottom{
+ margin-top: 1.5rem;
+ .payment-btn{
+   background-color: $desaturated-blue;
+   display: inline-block;
+   width: 100%;
+   padding: 1rem 1.5rem;
+   border-radius: 10px;
+   color: $very-pale-blue;
+   transition: all .3s ease-in-out;
+
+   &:hover{
+     background-color: $bright-blue;
+     box-shadow: 10px 10px 15px $very-pale-blue;
+   }
+
+ }
+ .cancel-btn{
+   margin-top:1.5rem;
+   color:$bright-blue;
+   font-weight: 700;
+   transition: color .3s ease;
+
+   &:hover{
+     color:$dark-blue
+   }
+ }
+}
