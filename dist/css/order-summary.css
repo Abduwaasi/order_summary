@@ -161,14 +161,14 @@ main {
 
 .middle a {
   text-decoration: underline;
-  color: #1f2f56;
+  color: #3829e0;
   font-weight: 700;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
 .middle a:hover {
-  color: #3829e0;
+  color: #1f2f56;
 }
 
 /*======================
@@ -179,7 +179,7 @@ main {
 }
 
 .bottom .payment-btn {
-  background-color: #7280a7;
+  background-color: #3829e0;
   display: inline-block;
   width: 100%;
   padding: 1rem 1.5rem;
@@ -190,20 +190,20 @@ main {
 }
 
 .bottom .payment-btn:hover {
-  background-color: #3829e0;
-  -webkit-box-shadow: 20px 20px 30px 40px inset #3829e0;
-          box-shadow: 20px 20px 30px 40px inset #3829e0;
+  background-color: #f5f7ff;
+  -webkit-box-shadow: 20px 20px 30px 40px inset #1f2f56;
+          box-shadow: 20px 20px 30px 40px inset #1f2f56;
 }
 
 .bottom .cancel-btn {
   margin-top: 1.5rem;
-  color: #3829e0;
+  color: #1f2f56;
   font-weight: 700;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
 
 .bottom .cancel-btn:hover {
-  color: #1f2f56;
+  color: #7280a7;
 }
 /*# sourceMappingURL=order-summary.css.map */

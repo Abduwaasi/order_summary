@@ -144,12 +144,12 @@ main {
   }
   a{
     text-decoration: underline;
-    color:$dark-blue;
+    color:$bright-blue;
     font-weight: 700;
     transition:color .3s ease-in-out;
 
     &:hover{
-        color:$bright-blue;
+        color:$dark-blue;
     }
   }
 }
@@ -160,7 +160,7 @@ main {
 .bottom{
  margin-top: 1.5rem;
  .payment-btn{
-   background-color: $desaturated-blue;
+   background-color: $bright-blue;
    display: inline-block;
    width: 100%;
    padding: 1rem 1.5rem;
@@ -169,19 +169,19 @@ main {
    transition: all .3s ease-in-out;
 
    &:hover{
-     background-color: $bright-blue;
-     box-shadow: 20px 20px 30px 40px inset $bright-blue;
+     background-color: $brigth-blue;
+     box-shadow: 20px 20px 30px 40px inset $very-pale-blue;
    }
 
  }
  .cancel-btn{
    margin-top:1.5rem;
-   color:$bright-blue;
+   color:$dark-blue;
    font-weight: 700;
    transition: color .3s ease;
 
    &:hover{
-     color:$dark-blue
+     color:$desaturated-blue
    }
  }
 }
