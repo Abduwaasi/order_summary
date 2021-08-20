@@ -191,8 +191,8 @@ main {
 
 .bottom .payment-btn:hover {
   background-color: #3829e0;
-  -webkit-box-shadow: 10px 10px 15px #f5f7ff;
-          box-shadow: 10px 10px 15px #f5f7ff;
+  -webkit-box-shadow: 20px 20px 30px 40px inset #3829e0;
+          box-shadow: 20px 20px 30px 40px inset #3829e0;
 }
 
 .bottom .cancel-btn {
